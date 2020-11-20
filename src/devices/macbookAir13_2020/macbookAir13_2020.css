@@ -1,0 +1,13 @@
+.macbookAir13_2020 {
+    background-image: url('./macbookAir13_2020.png');
+    width: 3350px;
+    height: 2000px;
+    z-index: 10;
+}
+
+.macbookAir13_2020 .container {
+    top: 160px;
+    left: 400px;
+    width: 2560px;
+    height: 1600px;
+} 

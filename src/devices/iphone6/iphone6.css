@@ -1,0 +1,14 @@
+.iphone6 {
+    background-image: url('./iphone6.png');
+    width: 435px;
+    height: 885px;
+    position: absolute;
+    z-index: 10;
+}
+
+.iphone6 .container {
+    top: 112.5px;
+    left: 30px;
+    width: 375px;
+    height: 667px;
+} 

@@ -1,0 +1,14 @@
+.iMac5k {
+    background-image: url('./iMac5k.png');
+    position: absolute;
+    width: 5590px;
+    height: 4390px;
+    z-index: 9;
+}
+
+.iMac5k .container {
+    top: 205px;
+    left: 235px;
+    width: 5120px;
+    height: 2880px;
+}
