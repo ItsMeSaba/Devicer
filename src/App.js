@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 
 import Welcome from './pages/welcome/welcome';
 import Main from './pages/main/main';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 function App() {
 	let [welcome, setWelcome] = useState(true); 

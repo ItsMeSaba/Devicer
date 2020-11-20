@@ -25,7 +25,7 @@ function DeviceData(name, id, {scale, size} = {}) {
     }
 }
 
-export default {
+let obj = {
     iphoneX : new DeviceData('iphone X', 'iphoneX'),
     iphone6 : new DeviceData('iphone 6', 'iphone6'),
     iphone5s : new DeviceData('iphone 5s', 'iphone5s'),
@@ -33,6 +33,19 @@ export default {
     macbookAir13_2020 : new DeviceData('Macbook Air 13"', 'macbookAir13_2020', { scale : .25, size : '3rem' }),
     iMac5k : new DeviceData('iMac 5k', 'iMac5k', { scale : .1, size : '3rem' })
 }
+
+export default obj;
+
+
+
+// export default {
+//     iphoneX : new DeviceData('iphone X', 'iphoneX'),
+//     iphone6 : new DeviceData('iphone 6', 'iphone6'),
+//     iphone5s : new DeviceData('iphone 5s', 'iphone5s'),
+//     iphone4s : new DeviceData('iphone 4s', 'iphone4s'),
+//     macbookAir13_2020 : new DeviceData('Macbook Air 13"', 'macbookAir13_2020', { scale : .25, size : '3rem' }),
+//     iMac5k : new DeviceData('iMac 5k', 'iMac5k', { scale : .1, size : '3rem' })
+// }
 // export default {
 //     iphone6 : {
 //         defaultScale : .5,

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import './sidebar.css'
 
 import AddIcon from '@material-ui/icons/Add';
@@ -58,6 +58,7 @@ function SidebarRow({ name, id, displayDevice, imgSize }) {
     return (
         <div  className='sidebarRow'>
             <img 
+                alt={id}
                 src={require(`./images/${id}.png`).default}
                 style={{ width : imgSize }}
             />

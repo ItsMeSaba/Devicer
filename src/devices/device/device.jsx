@@ -51,7 +51,9 @@ function Device({ name, iframe, biggestZindex, setBiggestZindex, defaultScale })
                     <div className="container">
                         <iframe src={iframe} 
                             scrolling={scrolling ? 'yes' : 'no'} 
-                            frameBorder="0">
+                            frameBorder="0"
+                            title={name}
+                        >
                         </iframe>
                     </div>
                 </div>
