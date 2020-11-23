@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import ReactGA from 'react-ga';
 
-ReactGA.initialize('UA-tracking-id'); // add your tracking id here.
+ReactGA.initialize('168546471'); // add your tracking id here.
 ReactGA.pageview(window.location.pathname + window.location.search);
 
 ReactDOM.render(
