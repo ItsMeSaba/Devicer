@@ -3,7 +3,6 @@ import './header.css'
 
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
-import CameraAltIcon from '@material-ui/icons/CameraAlt';
 import SettingsIcon from '@material-ui/icons/Settings';
 
 
