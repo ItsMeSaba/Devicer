@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 .sidebar {
     position: absolute;
     top: 0;
@@ -7,9 +14,14 @@
     background-color: #ffffff;
     height: var(--bodyHeight);
     padding: 10px 15px;
-    box-shadow: 5px 0 5px -3px rgba(0, 0, 0, .3);
+    -webkit-box-shadow: 5px 0 5px -3px rgba(0, 0, 0, .3);
+            box-shadow: 5px 0 5px -3px rgba(0, 0, 0, .3);
     overflow: auto;
+    -webkit-transition: -webkit-transform 1s ease-in-out;
+    transition: -webkit-transform 1s ease-in-out;
+    -o-transition: transform 1s ease-in-out;
     transition: transform 1s ease-in-out;
+    transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
 }
 
 .sidebar::-webkit-scrollbar {
@@ -17,9 +29,15 @@
 }
 
 .sidebar .sidebarTop {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     gap: 15px;
 }
 
@@ -29,9 +47,15 @@
 
 .sidebar .sidebarSearch {
     background-color: rgb(240, 240, 240);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     /* border-radius: 1000px; */
     border-radius: 3px;
     padding: 8px 18px;
@@ -47,9 +71,15 @@
 }
 
 .sidebar .sidebarRow {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     /* padding: 20px 0; */
     padding: 1.2rem 0;
 }
@@ -59,7 +89,11 @@
 }
 
 .sidebar .sidebarRow svg {
+    -webkit-transition: -webkit-transform .5s ease-in-out;
+    transition: -webkit-transform .5s ease-in-out;
+    -o-transition: transform .5s ease-in-out;
     transition: transform .5s ease-in-out;
+    transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
 }
 
 @media(min-width: 2000px) {

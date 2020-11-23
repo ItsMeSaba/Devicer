@@ -1,9 +1,21 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 .header {
-    box-shadow: 0 0 19px -12px rgb(0, 0, 0, .9);
+    -webkit-box-shadow: 0 0 19px -12px rgb(0, 0, 0, .9);
+            box-shadow: 0 0 19px -12px rgb(0, 0, 0, .9);
     padding: 12px 25px;
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 3fr 1fr;
     grid-template-columns: 1fr 3fr 1fr;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     justify-items: center;
     background-color: white;
     z-index: 995;
@@ -11,17 +23,29 @@
 
 .header button {
     border: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 .header > .websiteSearch {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding: 7px 20px;
     width: 280px;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     background-color: rgb(240, 240, 240);
     border-bottom: solid 2px var(--mainColor);
     border-radius: 3px;
@@ -42,14 +66,24 @@
 .header > .openSidebar {
     margin: 5px 0 0 0;
     justify-self: left;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .header > .right {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
 .header > .right > * {
@@ -58,8 +92,11 @@
 
 .header .settings, .header .camera {
     justify-self: right;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-self: center;
+    -ms-flex-item-align: center;
+        align-self: center;
 }
 
 @media(max-width: 768px) {
