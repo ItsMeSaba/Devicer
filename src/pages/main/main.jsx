@@ -8,7 +8,6 @@ import deviceListImport from '../../deviceList';
 import Canvas from '../../components/canvas/canvas';
 import RightSidebar from '../../components/rightSidebar/rightSidebar';
 
-
 function Main() {
     let [open, setOpen] = useState(true);
     let [openRight, setOpenRight] = useState(false);

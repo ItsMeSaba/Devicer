@@ -46,7 +46,17 @@
     align-items: center;
 }
 
-.header .settings {
+.header > .right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header > .right > * {
+    margin: 0 15px;
+}
+
+.header .settings, .header .camera {
     justify-self: right;
     display: flex;
     align-self: center;
