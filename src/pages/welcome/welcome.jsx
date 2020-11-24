@@ -12,7 +12,7 @@ function Welcome({ setWelcome }) {
             <div className="container">
 
                 <div className="box">
-                    <h2>Your Website <br/> on Different Devices</h2>
+                    <h1>Your Website <br/> on Different Devices</h1>
                     <p onClick={setWelcome}>Start <ArrowForwardIcon/></p>
                 </div>
 
