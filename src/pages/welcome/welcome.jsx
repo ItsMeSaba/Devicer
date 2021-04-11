@@ -1,13 +1,22 @@
 import React from 'react'
-// import Header from '../../components/header/header'
-import './welcome.css'
+import { Link } from 'react-router-dom'; 
+
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
-import i7 from './i7.png';
+import './welcome.css'
+
+import i7 from './i74.png';
 
 function Welcome({ setWelcome }) {
     return (
         <div className='welcome flexCenter'>
-            {/* <h1 className='name'>Name</h1> */}
+            <a 
+                className='copyright' 
+                title='Background Belongs to freepik.com' 
+                target='blank_' 
+                href='https://www.freepik.com/vectors/background'
+            >
+                ©
+            </a>
 
             <div className="container">
 
@@ -18,6 +27,10 @@ function Welcome({ setWelcome }) {
 
                 <img src={i7} alt=""/>
 
+            </div>
+
+            <div className='contactButton'>
+                <Link to='/contact'> Contact Developer </Link>
             </div>
         </div>
     )

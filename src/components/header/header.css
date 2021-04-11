@@ -5,6 +5,13 @@
 * Browsers: last 4 version
 */
 
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 .header {
     -webkit-box-shadow: 0 0 19px -12px rgb(0, 0, 0, .9);
             box-shadow: 0 0 19px -12px rgb(0, 0, 0, .9);
@@ -38,7 +45,7 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding: 7px 20px;
+    padding: .5rem 1.2rem;
     width: 280px;
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -111,6 +118,7 @@
     }
 
     .header > .websiteSearch { 
-        width: 400px;
+        width: 600px;
+        border-bottom: solid 4px var(--mainColor);
     }
 }

@@ -3,6 +3,9 @@ import { useEffect, useState } from 'react';
 
 import Welcome from './pages/welcome/welcome';
 import Main from './pages/main/main';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Contact from './pages/contact/contact';
+
 
 function App() {
 	let [welcome, setWelcome] = useState(true); 
@@ -13,8 +16,20 @@ function App() {
 
   	return (
     	<div className="App">
-			{ welcome && <Welcome setWelcome={() => setWelcome(false)}/> }
-			{ !welcome && <Main /> }
+			<Router>
+				<Switch>
+
+					<Route path='/' exact>
+						{ welcome && <Welcome setWelcome={() => setWelcome(false)}/> }
+						{ !welcome && <Main /> }
+					</Route>
+
+					<Route path='/contact'>
+						<Contact />
+					</Route>
+
+				</Switch>
+			</Router>
     	</div>
   	);
 }

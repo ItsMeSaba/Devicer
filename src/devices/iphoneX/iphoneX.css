@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
 .iphoneX {
     background-image: url('./iphoneX.png');
     width: 455px;
@@ -7,15 +8,26 @@
 }
 
 .iphoneX .container {
-    top: 57px;
+    top: 113px;
     left: 32px;
     /* width: 375px; */
     width: 390px;
-    height: 811px;
+    height: 754px;
     border-radius: 0 0 40px 40px;
     border: none;
     /* border-top: solid 1px white; */
 } 
+
+.iphoneX::after {
+    font-family: 'Poppins', sans-serif;
+    content: 'devicer.space';
+    position: absolute;
+    color: rgb(120, 120, 120);
+    top: 76px;
+    left: 170px;
+    font-weight: 400;
+    font-size: 19px;
+}
 
 .iphoneX .container iframe {
     border-top: none;

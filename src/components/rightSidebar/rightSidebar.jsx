@@ -1,4 +1,7 @@
 import React, { useState } from 'react'
+
+import { Link } from 'react-router-dom';
+
 import './rightSidebar.css'
 import CloseIcon from '@material-ui/icons/Close';
 
@@ -29,10 +32,16 @@ function RightSidebar({ setbgColor, setOpenRight, openRight, setbgImage }) {
 
             <div className='bgImage'>
                 <p>Background Image:</p>
+                
                 <input type="file" id="bgImage" onChange={e => {
                     setbgImage(URL.createObjectURL(e.target.files[0]))
                 }}/>
+                
                 <input type="submit" value='Remove' onClick={() => setbgImage('')}/>
+            
+                <div className="contactButton">
+                    <Link to='/contact'>Contact Developer</Link>
+                </div>
             </div>
         </div>
     )
