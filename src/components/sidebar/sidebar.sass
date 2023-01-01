@@ -1,0 +1,63 @@
+.sidebar 
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 996
+    min-width: 20rem
+    height: var(--bodyHeight)
+    padding: .8rem 1rem
+    background-color: #ffffff
+    overflow: auto
+    box-shadow: 5px 0 5px -3px rgba(0, 0, 0, .3)
+    transition: transform .3s ease-in-out
+
+    &::-webkit-scrollbar 
+        display: none
+
+    .sidebarTop 
+        display: flex
+        align-items: center
+        justify-content: space-between
+        gap: 15px
+
+    .sidebarSearch 
+        background-color: rgb(240, 240, 240)
+        display: flex
+        align-items: center
+        justify-content: space-between
+        border-radius: 3px
+        padding: .5rem .7rem
+        margin: 0 0 5px 0
+        border-bottom: solid 2px var(--mainColor)
+
+        input 
+            width: 100%
+            background-color: transparent
+            border: none
+            outline: none
+
+
+    .sidebarRow 
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding: 1.5rem 0
+        font-size: 1rem
+
+        img 
+            width: 30px
+
+        svg 
+            width: 1.5rem
+            height: 1.5rem
+            transition: transform .5s ease-in-out
+
+
+@media(min-width: 2000px) 
+    .sidebar .sidebarRow h4 
+       padding: 0 30px 
+    
+
+    .sidebar .sidebarSearch 
+        width: 300px
+    

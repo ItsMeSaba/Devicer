@@ -4,38 +4,64 @@
 // import Iphone4s from "./devices/iphone4s/iphone4s";
 // import MacbookAir13_2020 from "./devices/macbookAir13_2020/macbookAir13_2020";
 
-import Device from './devices/device/device';
+import Device from '../devices/device/device';
 
 
 // function DeviceData(name, id, defaultScale = 0.5) {
-function DeviceData(name, id, {scale, size} = {}) {
-    this.name = name;
-    this.defaultScale = scale || .5;
-    this.imgSize = size || '1.5rem';
-    this.display = false;
-    this.module = function(iframe, biggestZindex, setBiggestZindex) {
-        return <Device 
-            key={id} 
-            name={id} 
-            iframe={iframe}
-            biggestZindex={biggestZindex}
-            setBiggestZindex={setBiggestZindex}
-            defaultScale={this.defaultScale}
-        />
+// function DeviceData(name: string, id, {scale, size} = {}) {
+//     this.name = name;
+//     this.defaultScale = scale || .5;
+//     this.imgSize = size || '1.5rem';
+//     this.display = false;
+//     this.module = function(iframe, biggestZindex, setBiggestZindex) {
+//         return <Device 
+//             key={id} 
+//             name={id} 
+//             iframe={iframe}
+//             biggestZindex={biggestZindex}
+//             setBiggestZindex={setBiggestZindex}
+//             defaultScale={this.defaultScale}
+//         />
+//     }
+// }
+
+class DeviceData {
+    name: string;
+    id: string;
+    display: boolean;
+    defaultScale: number;
+    imgSize: string;
+    module: (...args: any) => any
+
+    constructor(deviceName: string, id: string, dimensions?: { scale: number, size: string }) {
+        this.name = deviceName;
+        this.id = id;
+        this.display = false;
+        this.defaultScale = dimensions?.scale || .5;
+        this.imgSize = dimensions?.size || '1.6rem';
+        this.module = function(iframe, biggestZindex, setBiggestZindex) {
+            return <Device 
+                key={id} 
+                name={id} 
+                iframe={iframe}
+                biggestZindex={biggestZindex}
+                setBiggestZindex={setBiggestZindex}
+                defaultScale={this.defaultScale}
+            />
+        }
     }
 }
 
-let obj = {
+const devices: { [key: string]: DeviceData } = {
     iphoneX : new DeviceData('iphone X', 'iphoneX'),
     iphone6 : new DeviceData('iphone 6', 'iphone6'),
     iphone5s : new DeviceData('iphone 5s', 'iphone5s'),
     iphone4s : new DeviceData('iphone 4s', 'iphone4s'),
-    macbookAir13_2020 : new DeviceData('Macbook Air 13"', 'macbookAir13_2020', { scale : .25, size : '3rem' }),
-    iMac5k : new DeviceData('iMac 5k', 'iMac5k', { scale : .1, size : '3rem' })
+    macbookAir13_2020 : new DeviceData('Macbook Air 13"', 'macbookAir13_2020', { scale : .25, size : '4rem' }),
+    iMac5k : new DeviceData('iMac 5k', 'iMac5k', { scale : .1, size : '4rem' })
 }
 
-export default obj;
-
+export default devices;
 
 
 // export default {

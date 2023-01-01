@@ -1,0 +1,49 @@
+
+.contact 
+    width: 100vw
+    height: var(--bodyHeight)
+    display: flex
+    align-items: center
+    justify-content: center
+    background-image: url('images/bg.png')
+    background-position: center
+    background-size: cover
+
+    .box 
+        margin: 0 5rem
+        width: 10rem
+        cursor: pointer
+
+    p 
+        font-size: 1.2rem
+        position: absolute
+        top: 10px
+        left: 10px
+        color: white
+        background-color: rgba(95, 39, 205,1.0)
+        box-shadow: 0 0 30px rgb(0, 0, 0, .5)
+        border-radius: 15px
+        cursor: pointer
+        padding: 0.7rem 1rem
+        font-weight: 800
+        border-radius: 3px
+        cursor: pointer
+        transition: letter-spacing .3s ease-in-out
+
+
+img 
+    width: 100%
+
+
+
+
+
+
+@media(max-width: 768px) 
+    .contact 
+        flex-direction: column
+    
+        .box 
+            margin: 3rem 0
+            width: 6rem
+    

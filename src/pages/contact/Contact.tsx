@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import './contact.css';
+import './contact.sass';
 
 import twitter from './images/twitter.png'
 import gmail from './images/gmail.png'

@@ -1,0 +1,1 @@
+export type DisplayDevice = (deviceId: string) => void;

@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import Draggable from 'react-draggable'
-import SettingsIcon from '@material-ui/icons/Settings';
-
-import './device.css';
+import SettingsIcon from '@mui/icons-material/Settings';
+import './device.sass';
 
 function Device({ name, iframe, biggestZindex, setBiggestZindex, defaultScale }) {
     let [scale, setScale] = useState(defaultScale);
@@ -26,7 +25,7 @@ function Device({ name, iframe, biggestZindex, setBiggestZindex, defaultScale })
     }
 
     return (
-        <Draggable>
+        <Draggable defaultPosition={{ x: window.innerWidth/2, y: window.innerHeight/4 }}>
             <div className="draggableDiv" style={{zIndex: zIndex}}>
                 <div className={`device ${name}`}
                     style={{transform: `scale(${scale})`}} 
